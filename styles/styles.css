@@ -1,0 +1,232 @@
+
+/*Header with Title, Search, and Menu Toggle */
+.container-fluid{
+  padding: 0; /*Extends to the borders */
+  margin: 0;
+}
+
+#emptyAdd{
+  font-size: 60px;
+  top: 40vh;
+  text-align: center;
+  text-decoration: none;
+}
+#emptyAdd a{
+  color: #00e6ac;
+}
+
+.header-holder{
+  z-index: 10;
+  background-color: #00ace6;
+  padding: 10px 0 10px 15px; /*Title at the left */
+}
+
+#header{
+  position: fixed;	
+
+}
+#footer{
+  position: fixed;
+  bottom: 0;
+  padding: 3px;
+}
+
+.task-display{
+  margin-top: 54px; /*To prevent header from overlapping */
+  margin-bottom: 0; 
+  padding-bottom: 0;
+}
+
+/* DISLPAY ITEMS */
+li p{
+  font-size: 16px;
+}
+
+li i {
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.clearfix a{
+  text-decoration: none; /* no underline */
+}
+.clearfix:hover{
+	background-color: #e6f9ff;
+}
+/* checked and unchecked tasks */
+#check{
+  color: #7cc659;
+  padding-right: 10px;
+}
+#uncheck{
+  color: #C7C7CD;
+  padding-right: 10px;
+}
+#edit{
+  color: #204bf7;
+  padding-right: 10px;
+}
+#remove{
+  float: right;
+  color: #f24646;
+}
+
+#time{
+  font-size: 12px;
+  color: #aeafb2;
+}
+
+.title{
+  font-size: 20px;
+  color: white;
+}
+
+/* SEARCH: enable absolute positioning */
+.inner-addon { 
+  position: relative;
+}
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  cursor: pointer;
+}
+/* align icon */
+.right-addon .glyphicon { 
+  right: 0px;
+  color: #00ace6;
+}
+/* add padding  */
+.right-addon input { 
+  padding-right: 30px;
+  border-radius: 20px;  
+}
+
+
+#undo{
+  color: red;
+  padding-left: 0;
+  padding-right: 2px;
+}
+
+#undoglyph { /* Rotating the glyphicon */
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+
+/* ------------------ */
+.btn{
+	background-color: #00ace6;
+	border: #00ace6;
+	color: white;
+}
+.btn:hover{
+	background-color: #00ace6;
+	border: #00ace6;
+	color: white;
+}
+
+
+/* DROPDOWN MENU */
+.dropdown-content {
+	list-style-type: none;
+	top: 0px;
+	right: -5px;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 0;
+	z-index: 1000;
+}
+.dropdown-content ul {
+	list-style-type: none;
+	padding: 0;
+	background-color: white;
+	margin-bottom: 0;
+}
+.dropdown-content li {
+	display: block;
+	padding: 10px 0 5px 10px;
+}
+.dropdown-content li:hover{
+	background-color: #e6f9ff;
+}
+
+/*Tasks Display */
+.row{
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+
+
+/*  Add Input  */
+.textbox {
+  margin-top: 65px;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.textbox:focus, .textbox:focus{
+  outline: none;
+
+}
+
+/* enable absolute positioning */
+.input-area { 
+  position: relative; 
+}
+/* style icon */
+.input-area .glyphicon {
+  position: absolute;
+  pointer-events: none;
+  padding: 7px 10px;
+  font-size: 20px;
+  color:  #C7C7CD;
+}
+/* add padding  */
+.input-area input  { 
+  padding-left:  45px;
+  border-radius: 0;
+  border-bottom: solid 1px #a9bcca;
+}
+
+/* -------------------------------- */
+/* textarea if need to convert back to it */
+textarea {
+  resize: none;
+  border-style: none;
+  border-color: Transparent;
+  overflow: auto;
+  outline: none;
+  width: 100%;
+  height: 500px;
+}
+p{
+	white-space: pre-wrap;
+}
+
+
+div.col-xs-1.menu{
+	padding: 0;
+}
+.btn.pull-right.menu{
+	padding-right: 5px;
+}
+.btn.pull-right.add{
+  padding-right: 0;
+}
+.btn.pull-right.xbtn{
+	padding-top: 10px;
+	padding-right: 0;
+}
+.btn.pull-left.backbtn{
+	padding-top: 8px;
+}

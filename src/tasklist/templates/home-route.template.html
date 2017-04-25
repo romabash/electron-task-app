@@ -1,0 +1,20 @@
+
+<task-header
+  items="list.items"
+  on-undo="list.undo()"
+  on-clear="list.clear()"
+	on-clean-task="list.cleanTask()">
+</task-header>
+<add-sign
+  items="list.items">
+</add-sign>
+<task-display 
+  items="list.items" 
+  add-me="list.addMe"\
+  on-remove="list.removeItem(index)"
+  on-check="list.checkItem(index)"
+  on-uncheck="list.unCheckItem(index)"
+  on-edit="list.edit(index)">
+</task-display>
+<task-footer></task-footer>
+

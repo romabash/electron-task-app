@@ -1,0 +1,65 @@
+
+<!-- Header -->
+	<div class="container-fluid">
+    <div id="header" class="col-xs-12 col-sm-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 header-holder">
+		  <div class="row top">
+		    <!-- Back to Title -->
+		    <div class="col-xs-2 title" ng-if="$ctrl.showSearch">
+		      <button class="btn pull-left backbtn" ng-click="$ctrl.startSearch()">
+			      <span class="glyphicon glyphicon-arrow-left"></span>
+		      </button>
+		    </div>
+		    <!-- Title -->
+		    <div class="col-xs-4 title" ng-if="!$ctrl.showSearch">
+	        Task
+	      </div>
+		    <!-- Search Initiaion --> 
+        <div class="col-xs-4" ng-if="!$ctrl.showSearch">
+		      <button class="btn pull-right" ng-click="$ctrl.startSearch()" >
+			      <span class="glyphicon glyphicon-search"></span>
+			    </button>
+	      </div>
+		    <!-- Search --> 
+        <div class="col-xs-6"  ng-if="$ctrl.showSearch" >
+	        <div class="inner-addon right-addon">
+            <i class="glyphicon glyphicon-search"></i>
+            <input id="userSearch" type="text" placeholder="Search..." class="form-control" ng-model="$ctrl.searchTerm" />
+          </div>
+	      </div>
+		    <!-- Undo Button -->
+		    <div class="col-xs-1">
+          <button id="undo" class="btn pull-right" ng-click="$ctrl.undo()" ng-if="$ctrl.showUndo">
+			      <span id ="undoglyph" class="glyphicon glyphicon-share-alt"></span>
+			    </button>
+	      </div>
+		    <!-- X Button -->
+		    <div class="col-xs-1" ng-if="$ctrl.showSearch" ng-click="$ctrl.resetSearch()">
+          <button class="btn pull-right xbtn">
+			      <span class="glyphicon glyphicon-remove"></span>
+			    </button>
+	      </div>
+		    <!-- Add Button -->
+		    <div class="col-xs-1" ng-if="!$ctrl.showSearch">
+		      <a ui-sref="add">
+            <button class="btn pull-right add" ng-click="$ctrl.cleanTask()">
+			        <span class="glyphicon glyphicon-plus"></span>
+			      </button>
+			    </a>
+	      </div>
+		    <!-- Menu Popup -->
+		    <div class="col-xs-1 menu">
+          <button class="btn pull-right menu" ng-if="!$ctrl.showSearch" ng-click="$ctrl.showMenu()" ng-blur="$ctrl.showMenu()">
+			      <span class="glyphicon glyphicon-option-vertical"></span>
+			    </button>
+		    <div class="dropdown-content" ng-if="$ctrl.show">
+          <ul>
+			      <li ng-mousedown="$ctrl.displayAll()"><span>View All<span></li>
+			      <li ng-mousedown="$ctrl.displayComplete()">View Complete</li>
+			      <li ng-mousedown="$ctrl.displayIncomplete()">View Incomplete</li>
+			      <li ng-mousedown="$ctrl.clear()" ng-if="$ctrl.showClear && $ctrl.showClear2">Delete All</li>
+			    </ul>
+        </div>
+	    </div>
+		</div>
+  </div> <!-- Ends Header Container-fluid -->
+</div>

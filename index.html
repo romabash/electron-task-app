@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='TaskList'>
+  <head>
+    <title> Task App </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css"> 
+
+    <link href="styles/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> 
+    
+  </head>
+
+  <body>
+   
+    <ui-view></ui-view>
+    
+	  <!-- Libraries -->
+	  <script src="lib/electron-jquery-load.js"></script>
+	  <script src="lib/jquery-3.1.1.min.js"></script>
+	  <script>if (window.module) module = window.module;</script>
+	  <script src="lib/angular.min.js"></script>
+	  <script src="lib/angular-ui-router.min.js"></script>
+	
+	  <!-- Modules -->
+	  <script src="src/tasklist/tasklist.module.js"></script>
+	
+	  <!-- Routes -->
+	  <script src="src/routes.js"></script> 
+	
+	  <!-- TaskList's service and controller -->
+	  <script src="src/tasklist/storage.service.js"></script>
+	  <script src="src/tasklist/task.service.js"></script>
+	  <script src="src/tasklist/task.controller.js"></script>
+	  <script src="src/tasklist/input.controller.js"></script>
+	
+	  <!-- TaskList's components and directives -->
+	  <script src="src/tasklist/taskheader.component.js"></script> 
+	  <script src="src/tasklist/taskinputheader.component.js"></script>
+	  <script src="src/tasklist/taskdisplay.component.js"></script> 
+		
+	  <script src="src/tasklist/taskadd-sign.component.js"></script> 
+	  <script src="src/tasklist/taskfooter.directive.js"></script> 
+    
+  </body>
+</html>

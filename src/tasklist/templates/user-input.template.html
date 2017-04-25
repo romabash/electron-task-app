@@ -1,0 +1,35 @@
+
+<!-- Header -->
+<div class="container-fluid">
+  <div id="header" class="col-xs-12 col-sm-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6 header-holder">
+	  <div class="row">
+		  <!-- BACK Button -->
+		  <div class="col-xs-2">
+		    <a ui-sref="home">
+          <button class="btn  pull-left" ng-click="$ctrl.cleanTask()">
+			      <span class="glyphicon glyphicon-arrow-left"></span>
+			    </button>
+			  </a>
+	    </div>
+		  <!-- Title -->
+		  <div class="col-xs-6 title">
+	        Add a Task
+	    </div>
+		  <!-- Add Button -->
+		  <div class="col-xs-2 add">
+		    <a ui-sref="home">
+          <button class="btn pull-right add" ng-click="$ctrl.add()">
+			      <span class="glyphicon glyphicon-plus"></span>
+			    </button>
+			  </a>
+	    </div>
+		</div>
+  </div> <!-- Ends Header Container-fluid -->
+</div>
+
+<!-- User Input -->
+<div class="col-xs-12 col-sm-12 col-md-offset-3 col-md-6 col-lg-offset-3 col-lg-6">
+  <div class="input-area textbox">
+    <textarea placeholder="Enter a task" ng-model="$ctrl.addMe"></textarea>
+	</div>
+</div>
