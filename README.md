@@ -11,6 +11,13 @@
 
 - Run `npm install` to install required node files: electron and electron-builder
 - Run `npm start` to start the app
+
+#### To package and build the app:
+
+- Run `npm run dist`
+
+#### Using CLI:
+
 - Run `node_modules/.bin/build -l` to build for linux
 - Run `node_modules/.bin/build -w` to build for windows
 - Run `node_modules/.bin/build -m` to build for mac
