@@ -1,7 +1,7 @@
 # Electron Desktop Task App
 
--Electron Task App written in Angular 1.5.8
--Browser version: https://romabash.github.io/task_app/
+- Electron Task App written in Angular 1.5.8
+- Browser version: https://romabash.github.io/task_app/
 
 ### Dependencies
 
