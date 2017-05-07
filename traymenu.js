@@ -1,7 +1,7 @@
 const {remote} = require('electron')
 const {Tray, Menu} = remote
 
-let trayIcon = new Tray('build/334x332.png')
+let trayIcon = new Tray('build/icon.png')
 
 const trayMenuTemplate = [
   {
