@@ -1,5 +1,5 @@
 const electron = require('electron');
-const {app, BrowserWindow, Menu} = electron;
+const {app, BrowserWindow, Menu, Tray} = electron;
 
 let win;
 
@@ -16,7 +16,7 @@ app.on('ready', () => {
   win.on('closed', () => {
     win = null
   });
-})
+});
 
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
@@ -24,7 +24,7 @@ app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit()
   }
-})
+});
 
 app.on('activate', () => {
   // On macOS it's common to re-create a window in the app when the
@@ -32,7 +32,7 @@ app.on('activate', () => {
   if (win === null) {
     createWindow()
   }
-})
+});
 
 //Menu
 const template = [
@@ -64,8 +64,8 @@ const template = [
    }
 ]
 
-const menu = Menu.buildFromTemplate(template)
-Menu.setApplicationMenu(menu)
+const menu = Menu.buildFromTemplate(template);
+Menu.setApplicationMenu(menu);
 
 
 // {
