@@ -18,6 +18,8 @@ app.on('ready', () => {
   });
 });
 
+//win.webContents.openDevTools();
+
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
   // For macOS
