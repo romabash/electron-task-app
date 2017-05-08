@@ -18,5 +18,8 @@
     "electron": "^1.6.6",
     "electron-builder": "^17.1.1",
     "asar": "^0.13.0"
+  },
+  "dependencies": {
+    "node-notifier": "^5.1.2"
   }
 }
