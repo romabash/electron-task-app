@@ -1,4 +1,5 @@
 const notifier = require('node-notifier');
+const path = require('path');
 
 (function(){
   'use strict';
@@ -30,9 +31,10 @@ const notifier = require('node-notifier');
         notifier.notify({
           title: 'Task has been added',
           message: `${task.substring(0,80)}`,
-          icon: `file://${__dirname}/build/icon.png`,
+          icon: path.join(__dirname, 'images/icon.png'),
           sound: true, // Only Notification Center or Windows Toasters
-          wait: true // Wait with callback, until user action is taken against notification
+          wait: true, // Wait with callback, until user action is taken against notification
+          timeout: 3
         }, function (err, response) {
           // Response is response from notification
         });
@@ -47,9 +49,10 @@ const notifier = require('node-notifier');
         notifier.notify({
           title: 'Task has been updated',
           message: `${task.substring(0,80)}`,
-          icon: `file://${__dirname}/build/icon.png`,
+          icon: `file://${__dirname}/images/icon.png`,
           sound: true, // Only Notification Center or Windows Toasters
-          wait: true // Wait with callback, until user action is taken against notification
+          wait: true, // Wait with callback, until user action is taken against notification
+          timeout: 3
         }, function (err, response) {
           // Response is response from notification
         });
@@ -84,10 +87,11 @@ const notifier = require('node-notifier');
     service.removeItem = function(itemIndex){
       notifier.notify({
         title: 'Task has been deleted',
-        message: `deleted ${items[itemIndex].task.substring(0,80)}`,
-        icon: `file://${__dirname}/build/icon.png`,
+        message: `${items[itemIndex].task.substring(0,80)}`,
+        icon: `file://${__dirname}/images/icon.png`,
         sound: true, // Only Notification Center or Windows Toasters
-        wait: true // Wait with callback, until user action is taken against notification
+        wait: true, // Wait with callback, until user action is taken against notification
+        timeout: 3
       }, function (err, response) {
         // Response is response from notification
       });
